@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "YYText",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v12)
     ],
     products: [
         .library(
@@ -16,7 +16,14 @@ let package = Package(
         .target(
             name: "YYText",
             path: "YYText",
-            publicHeadersPath: ".",
+            sources: [
+                "YYLabel.m",
+                "YYTextView.m",
+                "Component",
+                "String",
+                "Utility"
+            ],
+            publicHeadersPath: "include",
             cSettings: [
                 .define("YYTEXT_ENABLE_SHORTHAND", to: "1")
             ],
