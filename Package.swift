@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "YYText",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v9)
     ],
     products: [
         .library(
